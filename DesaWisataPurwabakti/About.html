@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>About</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .segment {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+        }
+
+        .image-segment {
+            background-image: url("Assets/about1.png");
+            background-size: cover;
+            background-position: center;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+            .image-segment .title {
+                color: white;
+                font-size: 86px;
+                position: absolute;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bolder;
+                margin-left: 80px;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+            }
+
+            .image-segment .description {
+                color: white;
+                font-size: 24px;
+                position: absolute;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: lighter;
+                bottom: 20px;
+                right: 20px;
+                text-align: right;
+                padding-right: 100px;
+                line-height: 1.2;
+                height: 80px;
+                margin-bottom: 50px;
+            }
+
+        .video-segment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+            .video-segment iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+        .image-text-segment {
+            position: relative;
+            background-image: url("Assets/about2.png");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            overflow-x: hidden
+        }
+
+            .image-text-segment .text {
+                font-size: 28px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: lighter;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="segment image-segment">
+        <div class="text">
+            <div class="title">Our History</div>
+            <div class="description">The history of Purwabakti Village displays the strength and beauty of the past. Founded in the 17th century, the village was a thriving trading center at the time.</div>
+        </div>
+    </div>
+
+    <div class="segment video-segment">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uRw65J0tGMI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="segment image-text-segment">
+        <div class="text">
+            <p>The beautiful cobbled streets and elegant traditional buildings have remained well preserved, reflecting the village's past grandeur. As you walk through the winding streets, you will feel the old atmosphere still alive.</p>
+        </div>
+    </div>
+</body>
+</html>

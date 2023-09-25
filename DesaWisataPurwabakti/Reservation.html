@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #F4ECD8;
+        }
+
+        .full-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+            .full-image img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 72px;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 18px;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+        }
+
+        .page-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            flex: 0 0 auto;
+            width: 500px;
+            margin: 0;
+            padding: 0;
+        }
+
+            .sidebar img {
+                width: 100%;
+                display: block;
+            }
+
+        .text-section {
+            flex: 1 1 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .visitor-amount,
+        .visiting-date {
+            padding: 20px;
+        }
+
+        .rounded-square {
+            width: 250px;
+            height: 50px;
+            background-color: #F3F3F3;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+
+        .rounded-square-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .rounded-square-btn {
+            width: 300px;
+            height: 80px;
+            border-radius: 20px;
+            background-color: #EFCB52;
+            font-size: 24px;
+            margin-top: 20px;
+            color: white;
+            border-color: #C0C0C0;
+            font-weight: bold;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .package-title {
+            text-align: left;
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .packages {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .package {
+            width: 400px;
+            height: 200px;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border: solid 1px black;
+        }
+
+        .package-text {
+            text-align: left;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+            .package-text p {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+        .price-container {
+            margin-top: 30px;
+        }
+
+        .package-price {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .package:focus {
+    box-shadow: 0 0 0 3px blue;
+}
+    </style>
+</head>
+<body>
+        <div>
+            <div class="container">
+                <div class="full-image">
+                    <img src="Assets/reservation.png" alt="Full Image" />
+                    <div class="text-container">
+                        <h1 class="title">Book your next visit!</h1>
+                        <p class="description">Get free merchandise and ensure your visiting availability</p>
+                    </div>
+                </div>
+                <div class="page-container">
+                    <div class="sidebar">
+                        <img src="Assets/sidebar.png" alt="Sidebar Image" />
+                    </div>
+                    <div class="content">
+                        <div class="visitor-amount">
+                            <h2>Visitor Amount</h2>
+                            <input type="text" class="rounded-square" placeholder="Amount" />
+                        </div>
+                        <div class="visiting-date">
+                            <h2>Visiting Date (Starts from 9.00 AM)</h2>
+                            <input type="date" class="rounded-square" />
+                        </div>
+                        <h2 class="package-title">Reservation Package</h2>
+                        <div class="packages">
+                            <div class="package">
+                                <div class="package-text">
+                                    <p>A. Standard Package</p>
+                                    <p>Benefits:</p>
+                                    <p>- Tour around the village</p>
+                                    <p>- Breakfast</p>
+                                    <div class="price-container">
+                                        <p class="package-price">Rp. 100.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package">
+                                <div class="package-text">
+                                    <p>B. Deluxe Package</p>
+                                    <p>Benefits:</p>
+                                    <p>- Tour around the village</p>
+                                    <p>- Breakfast</p>
+                                    <p>- One attraction choice</p>
+                                    <div class="price-container">
+                                        <p class="package-price">Rp. 150.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package">
+                                <div class="package-text">
+                                    <p>C. Premium Package</p>
+                                    <p>Benefits:</p>
+                                    <p>- Tour around the village</p>
+                                    <p>- Breakfast and Lunch</p>
+                                    <p>- One attraction choice</p>
+                                    <div class="price-container">
+                                        <p class="package-price">Rp. 180.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package">
+                                <div class="package-text">
+                                    <p>D. Premium Extra Package</p>
+                                    <p>Benefits:</p>
+                                    <p>- Tour around the village</p>
+                                    <p>- Breakfast</p>
+                                    <p>- One attraction choice</p>
+                                    <p>- One local merchandise</p>
+                                    <div class="price-container">
+                                        <p class="package-price">Rp. 220.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p>
+                                Want to stay the night instead? Book your hotel tickets <a href="#">here</a>!
+                            </p>
+                            <button class="rounded-square-btn">Book now!</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Product</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #F4ECD8;
+        }
+
+        .full-image {
+            background-image: url("Assets/product1.png");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .text-container {
+            text-align: left;
+            margin-left: 90px;
+            color: white;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .title {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            font-size: 22px;
+            font-weight: lighter;
+        }
+
+        .yellow-rectangle {
+            background-color: #EFCB52;
+            height: 20px;
+        }
+
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            margin-top: -90px;
+        }
+
+        .circle {
+            text-align: center;
+            margin: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .circle-title {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .circle-description {
+            font-size: 14px;
+            overflow-wrap: break-word;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #B8A184;
+            border-radius: 10px;
+            margin: 0 auto 20px;
+            width: 700px;
+            height: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .card .image-container {
+                width: 400px;
+                height: 100%;
+                flex-shrink: 0;
+                overflow: hidden;
+                border-radius: 10px 0 0 10px;
+            }
+
+                .card .image-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            .card .content-container {
+                padding: 20px;
+            }
+
+        .card-vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #B8A184;
+            border-radius: 10px;
+            margin: 0 10px 20px;
+            width: 400px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .card-vertical .image-container {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px 10px 0 0;
+                overflow: hidden;
+            }
+
+                .card-vertical .image-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .card-vertical-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 100%;
+            }
+        }
+
+
+        .titleA {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .descriptionA {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 12px;
+            font-weight: lighter;
+        }
+
+        .content-container {
+            margin-top: -20px;
+            padding: 20px;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card-reversed {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="full-image">
+                <div class="text-container">
+                    <h1 class="title">Our Products</h1>
+                    <p class="description">Handmade by our local artisans</p>
+                </div>
+            </div>
+            <div class="yellow-rectangle"></div>
+            <div class="circle-container">
+                <div class="circle">
+                    <img class="circle-image" src="Assets/circle2.png" alt="Image 1" />
+                    <h2 class="circle-title">Eco-Friendly Product</h2>
+                    <p class="circle-description">Discover our eco-friendly product that combines style and sustainability, making a positive impact on the planet while enhancing your lifestyle</p>
+                </div>
+                <div class="circle">
+                    <img class="circle-image" src="Assets/circle1.png" alt="Image 2" />
+                    <h2 class="circle-title">Top Quality</h2>
+                    <p class="circle-description">Experience the pinnacle of excellence with our top-quality product, crafted with meticulous attention to detail to exceed your expectations and stand the test of time.</p>
+                </div>
+                <div class="circle">
+                    <img class="circle-image" src="Assets/circle3.png" alt="Image 3" />
+                    <h2 class="circle-title">Affordable Price</h2>
+                    <p class="circle-description">Unlock exceptional value with our affordably priced product, offering unbeatable quality and features without breaking the bank, making luxury accessible to all.</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Assets/productcard1.png" alt="Image" />
+                    </div>
+                    <div class="content-container">
+                        <h2 class="titleA">Bamboo Flower Pot</h2>
+                        <p class="descriptionA">Our Handcrafted Bamboo Flower Pot is meticulously crafted using sustainably sourced bamboo, making it an eco-friendly choice.</p>
+                        <p class="price">Start from 60.000 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-vertical-container">
+                <div class="card-vertical">
+                    <div class="image-container">
+                        <img src="Assets/productcard2.png" alt="Image 1" />
+                    </div>
+                    <div class="content-container">
+                        <h2 class="titleA">Bamboo Lantern</h2>
+                        <p class="descriptionA">Create a serene and romantic atmosphere in your home. Our bamboo lanterns will be a captivating centerpiece, adding warmth and tranquility to any space.</p>
+                        <p class="price">Start from 60.000 </p>
+                    </div>
+                </div>
+
+                <div class="card-vertical">
+                    <div class="image-container">
+                        <img src="Assets/productcard3.png" alt="Image 2" />
+                    </div>
+                    <div class="content-container">
+                        <h2 class="titleA">Glycemic Rice Parboiled</h2>
+                        <p class="descriptionA">Make a positive impact on your health and lifestyle with Pratanak Glycemic Rice.</p>
+                        <p class="price">Start from 25.000 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Assets/productcard4.png" alt="Image" />
+                    </div>
+                    <div class="content-container">
+                        <h2 class="titleA">Instant Liwet Rice</h2>
+                        <p class="descriptionA">Whether you're craving a taste of an Indonesian meal option, our Instant Nasi Liwet is here to delight your taste buds.</p>
+                        <p class="price">Start from 15.000 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card card-reversed">
+                    <div class="image-container">
+                        <img src="Assets/productcard5.png" alt="Image" />
+                    </div>
+                    <div class="content-container">
+                        <h2 class="titleA">Gunung Gagak Coffee</h2>
+                        <p class="descriptionA">Grown at high altitudes and amidst fertile volcanic soil, ensuring optimal flavor and quality.</p>
+                        <p class="price">Start from 45.000 </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
